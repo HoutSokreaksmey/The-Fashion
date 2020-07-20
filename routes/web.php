@@ -150,7 +150,7 @@ Route::get('/women', function () {
         ],
         [
             "id" => 2,
-            "product_img" => "https://img.alicdn.com/imgextra/i3/265198064/O1CN01PtPfJv29RMSITWyz8_!!265198064.jpg_500x500.jpg",
+            "product_img" => "https://img.alicdn.com/imgextra/i3/602072006/O1CN01Nab4xj1Qgn7NjAfDN_!!602072006-0-lubanu-s.jpg_500x500.jpg",
             "price" => 15.5,
             "code" => "SSH948987"
         ],
@@ -168,7 +168,7 @@ Route::get('/women', function () {
         ],
         [
             "id" => 5,
-            "product_img" => "https://img.alicdn.com/imgextra/i1/265198064/O1CN0160eLQ129RMSBJuuKT_!!265198064.jpg_500x500.jpg",
+            "product_img" => "https://img.alicdn.com/imgextra/i3/2452321026/O1CN01RlTnCT1JRwyQJb7oc_!!2452321026-0-lubanu-s.jpg_500x500.jpg",
             "price" => 16,
             "code" => "SSH850596"
         ],

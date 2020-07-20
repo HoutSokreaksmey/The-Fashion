@@ -1,6 +1,7 @@
-@extends('home.layout')
+@extends('frontend.app')
+@section('title', 'Accessories')
 @section('content')
-    <div class="container">
+    <div class="container" style="margin-top: -150px">
     <div class="row">
       <div class="col">
         <div class="jumbotron">
@@ -29,5 +30,6 @@
     <div style="text-align:right;">
       <button class="btn btn-secondary">more...</button>
     </div>
+    <br>
   </div>
 @endsection

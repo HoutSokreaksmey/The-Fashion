@@ -150,6 +150,6 @@
               @yield('content')
             </div>
         </div>
-          @include('frontend.footer')
+          {{-- @include('frontend.footer') --}}
     </body>
 </html>

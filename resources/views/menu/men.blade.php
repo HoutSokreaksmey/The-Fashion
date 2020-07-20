@@ -1,7 +1,7 @@
 @extends('frontend.app')
 @section('title', 'Men')
 @section('content')
-  <div class="container" style="margin-top: -180px; margin-bottom: 0px">
+  <div class="container" style="margin-top: -150px">
     <div class="row">
       <div class="col">
         <div class="jumbotron">
@@ -29,6 +29,8 @@
     <div style="text-align:right;">
       <button class="btn btn-secondary">more...</button>
     </div>
+    
     <br>
   </div>
+  
 @endsection

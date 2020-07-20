@@ -1,4 +1,4 @@
-<footer class="page-footer font-small blue pt-4" style="margin-top: 200px">
+<footer class="page-footer font-small blue pt-4">
     <div style="background:#6f6f6f;font-size:15px;color:white;"> <!--footer-->
         <div class="container">
           <br><div class="row hidden-xs hidden-sm">

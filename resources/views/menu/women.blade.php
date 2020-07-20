@@ -1,6 +1,7 @@
-@extends('home.layout')
+@extends('frontend.app')
+@section('title', 'Women')
 @section('content')
-  <div class="container">
+  <div class="container" style="margin-top: -150px;">
     <div class="row">
       <div class="col">
         <div class="jumbotron">
@@ -13,7 +14,7 @@
         </div>
       </div>
     </div>
-    <div style="position:relative;width:200px;height:30px;margin-bottom: 12px;margin-top: -25px;">
+    <div style="position:relative;width:200px;height:30px;margin-bottom: 12px;margin-top: -15px;">
       <h3 class="lbl-container">Bag</h3>
     </div>
     <div class="row">

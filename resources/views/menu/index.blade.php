@@ -1,7 +1,7 @@
 @extends('frontend.app')
 @section('title', 'Home Page')
 @section('content')
-<div class="container">
+<div class="container" style="margin-top: 340px">
   <div class="row">
     <div class="col-12">
       {{-- Content Slide --}}
@@ -47,6 +47,24 @@
   <div class="container">
     <div class="row" style="position:relative;width:200px;height:30px;margin-bottom: 15px;margin-top: -25px;">
       <h3 class="lbl-container">New Arrival</h3>
+    </div>
+    <div class="row">
+      @foreach ($products as $item)
+        <div class="col-lg-2 col-sm-2 col-xs-6" style="margin-top:5px">
+          <a href="{{route('product_detail',$item->id)}}" style="color: black; text-decoration: none;">
+            <img class="img-fluid" src="{{$item->product_url}}" alt="">
+            <p style="margin-top: 5px; margin-bottom: 5px;" class="producttitle">{{$item->product_code}}</p>
+            <p style="margin-top:-5px;" class="productprice">{{$item->product_price}} USD</p>
+          </a>
+        </div>
+      @endforeach
+    </div>
+  </div>
+  <hr>
+<br>
+  <div class="container">
+    <div class="row" style="position:relative;width:200px;height:30px;margin-bottom: 15px;margin-top: -25px;">
+      <h3 class="lbl-container">Popularity</h3>
     </div>
     <div class="row">
       @foreach ($products as $item)
