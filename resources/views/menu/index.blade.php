@@ -1,7 +1,8 @@
 @extends('frontend.app')
 @section('title', 'Home Page')
 @section('content')
-<div class="container" style="margin-top: 340px">
+<div>
+<div class="container" style="margin-top: 380px">
   <div class="row">
     <div class="col-12">
       {{-- Content Slide --}}
@@ -77,9 +78,9 @@
         </div>
       @endforeach
     </div>
+    <br><hr>
   </div>
 </div>
-<br>
 <div class="container">
   <div class="row">
       <div class="col-12">
