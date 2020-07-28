@@ -27,7 +27,28 @@ Route::get('/product_detail/{id}','AppController@show')->name('product_detail');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function () {
-    Route::resource('user', 'UserController', ['except' => ['show']]);
+    Route::resource('user', 'UserController');
+    // Route::resource('ads', 'AdsController');
+
+    //Category
+    Route::resource('category', 'CategoryController');
+
+    //SubCategory
+    Route::get('/subcategory', 'SubCategoryController@index')->name('subcategory');
+    Route::get('/subcategory/create', 'SubCategoryController@create')->name('subcategory.create');
+    Route::post('/subcategory-create-action', 'SubCategoryController@store')->name('subcategory.store');
+    Route::get('/subcategory-edit/{id}', 'SubCategoryController@edit')->name('subcategory.edit');
+    Route::put('/subcategory-update-action/{id}', 'SubCategoryController@update')->name('subcategory.update');
+    Route::get('/subcategory-delete/{id}', 'SubCategoryController@destroy')->name('subcategory.destroy');
+
+    // Ads
+	Route::get('/ads', 'AdsController@index')->name('ads');
+	Route::get('/ads-show/{id}', 'AdsController@show')->name('ads.show');
+	Route::get('/ads-create', 'AdsController@create')->name('ads.create');
+    Route::post('/ads-create-action', 'AdsController@store')->name('ads.store');
+	Route::get('/ads-edit/{id}', 'AdsController@edit')->name('ads.edit');
+	Route::put('/ads-update-action/{id}', 'AdsController@update')->name('ads.update');
+	Route::get('/ads-delete/{id}', 'AdsController@destroy')->name('ads.destroy');
 });
 
 Route::get('/men', function () {

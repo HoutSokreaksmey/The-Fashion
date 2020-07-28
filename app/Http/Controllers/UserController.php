@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use app\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -24,18 +26,23 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('users.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  \App\Http\Requests\UserRequest  $request
+     * @param  \App\User  $model
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(Request $request, User $model)
     {
-        //
+        
+        $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
+        //dd($model);
+        return redirect()->route('user.index');
+        // return redirect()->route('user.index')->withStatus(__('User successfully created.'));
     }
 
     /**
@@ -57,7 +64,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        // dd($id);
+        $user =User::findOrFail($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -69,7 +78,17 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // dd($id);
+        $user = User::findOrFail($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->update();
+        // dd($user);
+        // $user->update(
+        //     $request->merge(['password' => Hash::make($request->get('password'))])
+        //         ->except([$request->get('password') ? '' : 'password']
+        // ));
+        return redirect()->route('user.index');
     }
 
     /**
@@ -80,6 +99,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->route('user.index');
     }
 }

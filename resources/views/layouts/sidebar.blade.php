@@ -51,8 +51,27 @@
       <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Category Product</h6>
-          <a class="collapse-item" href="#">Category</a>
-          <a class="collapse-item" href="#">Insert Category</a>
+          <a class="collapse-item" href="{{ route('category.index') }}">Category</a>
+          <a class="collapse-item" href="{{ route('category.create') }}">Insert Category</a>
+          <a class="collapse-item" href="{{route('subcategory')}}">Sub Category</a>
+          <a class="collapse-item" href="{{route('subcategory.create')}}">Insert Sub Category</a>
+          {{-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
+          <a class="collapse-item" href="utilities-other.html">Other</a> --}}
+        </div>
+      </div>
+    </li>
+
+    <!-- Nav Item - Ads Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAds" aria-expanded="true" aria-controls="collapseAds">
+        <i class='fas fa-ad' style='font-size:16px'></i>
+        <span>Ads Management</span>
+      </a>
+      <div id="collapseAds" class="collapse" aria-labelledby="headingAds" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Ads</h6>
+          <a class="collapse-item" href="{{ route('ads') }}">Ads List</a>
+          <a class="collapse-item" href="{{ route('ads.create') }}">Insert Ads</a>
           {{-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
           <a class="collapse-item" href="utilities-other.html">Other</a> --}}
         </div>
@@ -77,7 +96,7 @@
         <div class="bg-white py-2 collapse-inner rounded">
           {{-- <h6 class="collapse-header">Login Screens:</h6> --}}
           <a class="collapse-item" href="{{ route('user.index')}}">User List</a>
-          <a class="collapse-item" href="#">Insert User</a>
+          <a class="collapse-item" href="{{route('user.create')}}">Insert User</a>
           <a class="collapse-item" href="#">User Type</a>
           {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
           <div class="collapse-divider"></div>

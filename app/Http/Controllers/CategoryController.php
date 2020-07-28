@@ -14,7 +14,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        // dd('Hello');
+        $category = Category::get();
+        return view('category.index', compact('category'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('category.create');
     }
 
     /**
@@ -35,7 +37,12 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = new Category();
+
+        $category->category_name = $request->category_name;
+
+        $category->save();
+        return redirect()->route('category.index');
     }
 
     /**
@@ -57,7 +64,9 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        // $category = Category::findOrFail($category);
+        // dd($category);
+        return view('category.edit', compact('category'));
     }
 
     /**
@@ -67,9 +76,14 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    // public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        //
+        $category = Category::find($id);
+        $category->category_name = $request->category_name;
+        $category->save();
+        // dd($category);
+        return redirect()->route('category.index');
     }
 
     /**
@@ -78,8 +92,13 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    // public function destroy(Category $category)
+    public function destroy($id)
     {
-        //
+        // dd($id);
+        $category = Category::find($id);
+        $category->delete();
+        // dd($category);
+        return redirect()->route('category.index');
     }
 }
