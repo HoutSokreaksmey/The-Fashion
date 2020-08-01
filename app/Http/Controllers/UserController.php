@@ -36,7 +36,7 @@ class UserController extends Controller
      * @param  \App\User  $model
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request, User $model)
+    public function store(UserRequest $request, User $model)
     {
         
         $model->create($request->merge(['password' => Hash::make($request->get('password'))])->all());
@@ -76,7 +76,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
         // dd($id);
         $user = User::findOrFail($id);

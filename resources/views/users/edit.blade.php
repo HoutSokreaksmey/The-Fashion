@@ -1,5 +1,5 @@
 @extends('layouts.backend')
-@section('title', 'Edit User')
+@section('title', 'Update User')
 @section('content')
 <div class="container-fluid mt--7">
     <div class="row">

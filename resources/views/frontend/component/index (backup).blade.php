@@ -2,7 +2,8 @@
 @section('title', 'Home Page')
 @section('content')
 <div>
-<div class="container" style="margin-top: 380px">
+<div class="container">
+  {{-- <div class="container" style="margin-top: 380px"> --}}
   <div class="row">
     <div class="col-12">
       {{-- Content Slide --}}
@@ -19,9 +20,9 @@
     
         <!-- Wrapper for slides -->
         <div class="carousel-inner" style="margin-bottom: 20px;">
-            @foreach($slides as $key => $slider)
+            @foreach($ads as $key => $ad)
               <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                <img src="{{$slider->url}}" class="d-block w-100"  alt="..."> 
+                <img src="{{asset('uploads/ads')}}/{{ $ad->image }}" class="d-block w-100"  alt="..."> 
               </div>
             @endforeach
             {{-- @foreach($slides as $item)
@@ -38,7 +39,7 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
           <span class="glyphicon glyphicon-chevron-right"></span>
           <span class="sr-only">Next</span>
-        </a> --}} 
+        </a>  --}}
       </div>
       </div>
       {{-- End Conten Slide --}}

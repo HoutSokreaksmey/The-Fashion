@@ -15,7 +15,7 @@
                     <div class="card-header bg-white border-0">
                         <div class="row align-items-center">
                             <div class="col-8">
-                                <h3 class="mb-0">{{ __('Ads Management') }}</h3>
+                                <h3 class="mb-0">{{ __('Insert Ads') }}</h3>
                             </div>
                             <div class="col-4 text-right">
                                 <a href="{{ route('ads') }}" class="btn btn-sm btn-primary">{{ __('Back to list') }}</a>
@@ -39,6 +39,7 @@
                             <div class="col">
                                 <form action="{{ route('ads.store') }}" method='POST' enctype="multipart/form-data" class="was-validated">
                                     @csrf
+                                    @method('post')
                                     <div class="preview text-center">
                                         <img class="preview-img" src="https://icon-library.net/images/image-gallery-icon/image-gallery-icon-27.jpg" id="product_img" width="350" height="350"/>
                                         <div class="browse-button" style="left: 206px; width:350px; height:350px">
@@ -78,7 +79,6 @@
 
             $("#img_input").change(function() {
             readURL(this);
-            // });
         });
     </script>
 @endsection

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Ads;
+use App\Category;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
-use App\Slide;
+// use App\Slide;
 use App\product;
+use App\SubCategory;
 
 class AppController extends Controller
 {
@@ -16,11 +19,42 @@ class AppController extends Controller
      */
     public function index()
     {
-        $slides = Slide::get();
-        //dd($slides);
-        $products = Product::get();
-        // dd("Hello");
-        return view('menu.index', compact('slides', 'products'));
+        $product = Product::all();
+        $category = Category::all();
+        $ads = Ads::all();
+        $subcategory = SubCategory::all();
+
+        return view('frontend.component.index', compact('product', 'category', 'ads', 'subcategory'));
+    }
+
+    //Man
+    public function men(Request $request)
+    {
+        $category = Category::all();
+        $subcategory = SubCategory::all();
+        $product = Product::all();
+
+        return view('frontend/component/men', compact('category', 'subcategory', 'product'));
+    }
+
+    //Women
+    public function women(Request $request)
+    {
+        $category = Category::all();
+        $subcategory = SubCategory::all();
+        $product = Product::all();
+
+        return view('frontend/component/women', compact('category', 'subcategory', 'product'));
+    }
+
+    //Couple
+    public function couple(Request $request)
+    {
+        $category = Category::all();
+        $subcategory = SubCategory::all();
+        $product = Product::all();
+
+        return view('frontend/component/couple', compact('category', 'subcategory', 'product'));
     }
 
     /**
@@ -56,7 +90,7 @@ class AppController extends Controller
         //Query product by id
         $product = Product::findOrFail($id);
         // dd($product);
-        return view('frontend.product.product_detail', compact('product'));
+        return view('frontend.component.product_detail', compact('product'));
     }
 
     /**

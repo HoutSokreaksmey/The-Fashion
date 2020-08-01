@@ -13,65 +13,8 @@
         <title>
           @yield('title')
         </title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-                margin-top: 270px;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                /* color: #636b6f; */
-                color: #eee;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -79,17 +22,13 @@
                 <div class="float-right">
                     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: gray;">
                         <a class="navbar-brand" href="/"><img src="{{asset('img/fashion.png')}}" style=" margin-left:30px;width:80px;height:45px;margin-top:-15px;margin-bottom:-10px;"></a>
-                          <div>
-                            {{-- <a href="/"><img class="navbar-brand" src="fashion.png" alt=""></a> --}}
-                          </div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                         </button>
-                      
                         <div class="collapse navbar-collapse" id="navbarColor01">
                           <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                              <a class="nav-link" href="{{route('product.men')}}">Men <span class="sr-only">(current)</span></a>
+                            {{-- <li class="nav-item active">
+                              <a class="nav-link" href="{{route('app.men')}}">Men <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="{{route('product.women')}}">Women</a>
@@ -102,7 +41,12 @@
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="{{route('product.brand')}}">Brands</a>
-                            </li>
+                            </li> --}}
+                            @foreach ($category as $categories)
+                              <li class="nav-item active">
+                                  <a class="nav-link" href="/{{$categories->category_name }}">{{ $categories->category_name }}</a>
+                              </li> 
+                            @endforeach
                             <div class="col-sm-4 col-md-4" >
                                 <form>
                                   <div id="custom-search-input">
@@ -118,10 +62,6 @@
                                 </form>
                             </div>
                           </ul>
-                          {{-- <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                          </form> --}}
                         </div>
                         <div class="top-right links">
                             @auth
@@ -146,10 +86,10 @@
                     @endauth --}}
                 </div>
             @endif
-            <div>
+            <div style="margin-top: 60px">
               @yield('content')
             </div>
         </div>
-          {{-- @include('frontend.footer') --}}
+          @include('frontend.footer')
     </body>
 </html>

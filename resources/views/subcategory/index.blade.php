@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Sub Category</h1>
+        <h1 class="h3 mb-2 text-gray-800">List Sub Category</h1>
         {{-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> --}}
         <div>
             <a href="{{route('subcategory.create')}}" class="btn btn-sm btn-primary "><i class="fas fa-add"></i> Create New</a>
@@ -61,7 +61,7 @@
                                     <i class="fas fa-edit"></i>
                                 </a><span>&nbsp;</span>
                                 <a href="{{route('subcategory.destroy', $subcat->id)}}">
-                                    <i class="fas fa-trash"></i>
+                                    <i class="fas fa-trash" style="color: red"></i>
                                 </a>
                             </td>
                         </tr>

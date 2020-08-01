@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Category</h1>
+        <h1 class="h3 mb-2 text-gray-800">List Category</h1>
         {{-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> --}}
         <div>
             <a href="{{route('category.create')}}" class="btn btn-sm btn-primary "><i class="fas fa-add"></i> Create New</a>
@@ -54,18 +54,18 @@
                         </td>
                         <td>{{  $cat->created_at != null ? $cat->created_at->format('d/m/y') : '' }}</td>
                         <td>{{  $cat->updated_at != null ? $cat->updated_at->format('d/m/y') : '' }}</td>
-                        <td class="row">
+                        <td class="row" style="margin-left: 50px">
                             <form>
                               <a href="{{route('category.edit', $cat->id) }}">
-                                <i class="fas fa-edit"></i>
-                              </a><span>&nbsp;</span>
+                                <i class="fas fa-edit" style="margin-top: 7px"></i>
+                              </a>
                             </form>
                             
                             <form action="{{ route('category.destroy', $cat->id) }}" method="post">
                               {{ method_field('DELETE') }}
                               {{ csrf_field() }}
                               <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this Category?") }}') ? this.parentElement.submit() : ''">
-                                <i class="fas fa-trash"></i>
+                                <i class="fas fa-trash" style="color: red"></i>
                             </button>
                             </form>
                             {{-- <a href="#">

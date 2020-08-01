@@ -18,8 +18,10 @@ class CreateProductsTable extends Migration
             $table->char('product_name', 100);
             $table->char('product_code', 100);
             $table->double('product_price');
-            $table->char('product_brand', 100);
-            $table->longText('product_url');
+            $table->longText('product_img');
+            $table->unsignedInteger('category_id');
+            $table->unsignedInteger('subcategory_id');
+            $table->integer('status')->default('1');
             $table->timestamps();
         });
     }
