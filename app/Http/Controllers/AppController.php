@@ -57,6 +57,16 @@ class AppController extends Controller
         return view('frontend/component/couple', compact('category', 'subcategory', 'product'));
     }
 
+    //Accessories
+    public function accessories(Request $request)
+    {
+        $category = Category::all();
+        $subcategory = SubCategory::all();
+        $product = Product::all();
+
+        return view('frontend/component/accessories', compact('category', 'subcategory', 'product'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -90,7 +100,8 @@ class AppController extends Controller
         //Query product by id
         $product = Product::findOrFail($id);
         // dd($product);
-        return view('frontend.component.product_detail', compact('product'));
+        $category = Category::all();
+        return view('frontend.component.product_detail', compact('product','category'));
     }
 
     /**
@@ -125,5 +136,17 @@ class AppController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function search(Request $request){
+        // $category = Category::all();
+        // $subcategory = SubCategory::all();
+        $product = Product::all();
+        $search = $request->search_value;
+       
+        $products = Product::where('product_name','LIKE',"%$request->search_value%")
+                            ->orWhere('product_code', 'LIKE',"%$request->search_value%")->get();
+                            dd($search.$products );
+        return view('frontend.component.product_search', compact('products', 'category', 'subcategory'));
     }
 }

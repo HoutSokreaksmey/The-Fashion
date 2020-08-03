@@ -26,6 +26,7 @@ Route::get('/', 'AppController@index');
 Route::get('/Men', 'AppController@men')->name('Men');
 Route::get('/Women', 'AppController@women')->name('Women');
 Route::get('/Couple', 'AppController@couple')->name('couple');
+Route::get('/Accessories', 'AppController@accessories')->name('accessories');
 
 Route::get('/product_detail/{id}','AppController@show')->name('product_detail');
 
@@ -40,6 +41,9 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Category
     Route::resource('category', 'CategoryController');
+
+    //Search
+    Route::get('search', 'AppController@search')->name('search');
 
     //SubCategory
     Route::get('/subcategory', 'SubCategoryController@index')->name('subcategory');

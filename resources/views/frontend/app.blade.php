@@ -48,10 +48,10 @@
                               </li> 
                             @endforeach
                             <div class="col-sm-4 col-md-4" >
-                                <form>
+                                {{-- <form action="{{ route('search') }}">
                                   <div id="custom-search-input">
                                     <div class="input-group col-md-12">
-                                      <input type="text" class="form-control" placeholder="Search" name="search" autocomplete="off">
+                                      <input type="text" class="form-control" placeholder="Search" name="search_value" autocomplete="off">
                                       <span class="input-group-btn">
                                         <button type="submit" class="btn btn-info">
                                             <i class="glyphicon glyphicon-search"></i>
@@ -59,7 +59,18 @@
                                       </span>
                                     </div>
                                   </div>
-                                </form>
+                                </form> --}}
+                                <form action="{{ route('search') }}" class="navbar-search navbar-search-info form-inline d-md-flex ml-lg-auto mb-0">
+                                  <div class="form-group">
+                                      <div class="input-group input-group-alternative">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                          </div>
+                                          <input class="form-control" placeholder="Search" type="text" name="search_value">
+                                      </div>
+                                      <input type="submit" class="btn btn-secondary ml-3" value="Search" />
+                                  </div>
+                              </form>
                             </div>
                           </ul>
                         </div>

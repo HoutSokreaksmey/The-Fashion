@@ -17,8 +17,7 @@
                         </label>
                     @else
                         <label class="btn btn-light" style="border-color: #ccc">
-                            <input type="radio" name="{{ $subcategories->id }}" id="option" autocomplete="off">
-                            {{ $subcategories->subcategory_name }}
+                            <a href="#{{ $subcategories->subcategory_name }}" class=" scroll btn btn-default">{{ $subcategories->subcategory_name }}</a>
                         </label>
                     @endif
                 @endif 
@@ -30,9 +29,10 @@
     </div>
   </div>
 
-  <div class="container mt-n4">
-    <div class="row">
-        @foreach ($subcategory as $subcategories)
+  <div class="container mt-n4"> 
+    @foreach ($subcategory as $subcategories)
+    <div class="row" id="{{$subcategories->subcategory_name}}">
+       
         @if ($subcategories->category->category_name == 'Women')
             @if ($subcategories->subcategory_name === 'New Arrival' || $subcategories->subcategory_name === 'Popularity' || $subcategories->subcategory_name === 'Instock')
                 <div hidden style="position:relative; width:200px; height:50px; margin:10px; margin-top:20px">
@@ -51,8 +51,7 @@
                 </div>
             @endif
         @endif
-        @endforeach
-        
     </div>
+    @endforeach
   </div>
 @endsection

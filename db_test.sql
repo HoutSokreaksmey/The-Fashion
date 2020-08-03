@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2020 at 03:10 PM
+-- Generation Time: Aug 01, 2020 at 04:37 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -180,7 +180,28 @@ INSERT INTO `products` (`id`, `product_name`, `product_code`, `product_price`, `
 (31, '982031 Genuine multifunction card package wallet', 'SW982031', 10, '1596103564.jpg', 1, 7, 1, '2020-07-30 03:06:04', '2020-07-30 03:06:04'),
 (32, '60462 Men vertical section cross-section bills wallet', 'SW60462', 8, '1596103606.jpg', 1, 7, 1, '2020-07-30 03:06:46', '2020-07-30 03:06:46'),
 (33, '862195 Tide brand light hollow backpack men''s casual ultralight college student bag female', 'EB862195', 17, '1596103674.jpg', 1, 8, 1, '2020-07-30 03:07:54', '2020-07-30 03:07:54'),
-(34, '850262 Tide brand backpack male Korean version of large-capacity travel bag high school college students', 'EB850262', 14, '1596103724.jpg', 1, 8, 1, '2020-07-30 03:08:44', '2020-07-30 03:08:44');
+(34, '850262 Tide brand backpack male Korean version of large-capacity travel bag high school college students', 'EB850262', 14, '1596103724.jpg', 1, 8, 1, '2020-07-30 03:08:44', '2020-07-30 03:08:44'),
+(35, '853467 Small fragrance luxury small bag new small ck female bag limited western fashion cross-body', 'LB853467', 12, '1596115892.jpg', 2, 12, 1, '2020-07-30 06:31:32', '2020-07-30 06:31:32'),
+(36, '853467 Small fragrance luxury small bag new small ck female bag limited western fashion cross-body', 'LB853467', 12, '1596115934.jpg', 2, 12, 1, '2020-07-30 06:32:14', '2020-07-30 06:32:14'),
+(37, '764418 Summer luxury bag new trendy saddle bag female fashion net red messenger bag wild', 'LB764418', 15, '1596115980.jpg', 2, 12, 1, '2020-07-30 06:33:00', '2020-07-30 06:33:00'),
+(38, '657637 Summer ladies small bags new trendy fashion hit color small square bag wild ins single', 'LB657637', 13, '1596116020.jpg', 2, 12, 1, '2020-07-30 06:33:40', '2020-07-30 06:33:40'),
+(39, '606628 Small bag handbags popular new trend summer wild broadband single shoulder messenger bag', 'LB606628', 15, '1596116138.jpg', 2, 12, 1, '2020-07-30 06:35:38', '2020-07-30 06:35:38'),
+(40, '615026 Portable small round bag female new Korean fashion simple chic ladies shoulder bag', 'SSH847405', 13, '1596116250.jpg', 2, 12, 1, '2020-07-30 06:37:29', '2020-07-30 06:37:29'),
+(41, '923760 Japanese white shoes female new summer thin section breathable net red fashion wild', 'PSH923760', 15, '1596117898.jpg', 2, 13, 1, '2020-07-30 06:49:29', '2020-07-30 07:04:58'),
+(42, '916394 Daddy shoes womens breathable mesh face new summer fashion all-match sports shoes', 'PSH916394', 12, '1596117943.jpg', 2, 13, 1, '2020-07-30 07:05:42', '2020-07-30 07:05:42'),
+(43, '921783 Daddy shoes womens summer breathable new foot small lightweight platform net celebrity wild', 'PSH921783', 13, '1596118167.jpg', 2, 13, 1, '2020-07-30 07:09:26', '2020-07-30 07:09:26'),
+(44, '872172 Little white shoes womens shoes summer new breathable thick-soled shoes Korean version', 'PSH872172', 14, '1596118190.jpg', 2, 13, 1, '2020-07-30 07:09:50', '2020-07-30 07:09:50'),
+(45, '850664 Net celebrity old shoes womens summer new breathable feet small thick sole all-match black smart', 'PSH850664', 12, '1596118221.jpg', 2, 13, 1, '2020-07-30 07:10:20', '2020-07-30 07:10:20'),
+(46, '379609 new Korean fat mm plus fat XL womens hooded sweater womens autumn loose', 'CS379609', 13, '1596120998.jpg', 2, 14, 1, '2020-07-30 07:56:38', '2020-07-30 07:56:38'),
+(47, '999365 waitmore sweater women loose large size spring and autumn Korean long-sleeved', 'CS999365', 13, '1596121069.jpg', 2, 14, 1, '2020-07-30 07:57:48', '2020-07-30 07:57:48'),
+(48, '950341 Girlfriends Bracelet Female Student A Pair of Sisters Chain Two Three Four Sen Sweet Fresh', 'BW950341', 11, '1596121181.jpg', 2, 15, 1, '2020-07-30 07:59:40', '2020-07-30 07:59:40'),
+(49, '875144 Watch female ins style cool personality trend student simple casual atmosphere art forest retro', 'BW875144', 12, '1596121368.jpg', 2, 15, 1, '2020-07-30 08:02:48', '2020-07-30 08:02:48'),
+(50, '883398 Hong Kong style retro fashion temperament summer new casual wild sexy waist was thin', 'CS883398', 12, '1596121501.jpg', 2, 16, 1, '2020-07-30 08:05:01', '2020-07-30 08:05:01'),
+(51, '857859 Nightclub sexy fashion Korean women''s princess pettiskirt V-neck waist thin strapless sleeveless', 'CS857859', 17, '1596121542.jpg', 2, 16, 1, '2020-07-30 08:05:41', '2020-07-30 08:05:41'),
+(52, '242830 Korean version of the new spring tassel A word skirt', 'OSK242830', 14, '1596121693.jpg', 2, 17, 1, '2020-07-30 08:08:12', '2020-07-30 08:08:12'),
+(53, '177146 Korean version of the woolen a word skirt', 'OSK177146', 17, '1596121716.jpg', 2, 17, 1, '2020-07-30 08:08:36', '2020-07-30 08:08:36'),
+(54, '763381 stetch self-cultivation zipper long pants', 'OP763381', 18, '1596121933.jpg', 2, 18, 1, '2020-07-30 08:10:38', '2020-07-30 08:12:12'),
+(55, '795366 Printed letters Leggings autumn stretch pants', 'OP795366', 14, '1596121953.jpg', 2, 18, 1, '2020-07-30 08:11:04', '2020-07-30 08:12:32');
 
 -- --------------------------------------------------------
 
@@ -226,7 +247,14 @@ INSERT INTO `sub_categories` (`id`, `subcategory_name`, `category_id`, `status`,
 (8, 'Backpack', 1, 1, '2020-07-29 08:05:33', '2020-07-29 08:05:33'),
 (9, 'New Arrival', 1, 1, '2020-07-29 10:06:02', '2020-07-29 10:06:02'),
 (10, 'Popularity', 2, 1, '2020-07-29 10:06:15', '2020-07-29 10:06:15'),
-(11, 'Instock', 1, 1, '2020-07-29 10:06:42', '2020-07-29 10:06:42');
+(11, 'Instock', 1, 1, '2020-07-29 10:06:42', '2020-07-29 10:06:42'),
+(12, 'Bag', 2, 1, '2020-07-30 06:22:55', '2020-07-30 06:22:55'),
+(13, 'Shoes', 2, 1, '2020-07-30 06:23:16', '2020-07-30 06:23:16'),
+(14, 'Shirt', 2, 1, '2020-07-30 06:23:46', '2020-07-30 06:23:46'),
+(15, 'Watch', 2, 1, '2020-07-30 06:24:30', '2020-07-30 06:24:30'),
+(16, 'Dress', 2, 1, '2020-07-30 06:24:47', '2020-07-30 06:24:47'),
+(17, 'Skirt', 2, 1, '2020-07-30 06:25:16', '2020-07-30 06:25:16'),
+(18, 'Pants', 2, 1, '2020-07-30 06:25:28', '2020-07-30 06:25:28');
 
 -- --------------------------------------------------------
 
@@ -251,7 +279,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$ZH8f9pw0S5Qpyc7b7YBuoudroZ1.pBoFpnEkCABeHOIqGiXGhTwQG', NULL, '2020-07-29 07:29:17', '2020-07-30 05:59:58'),
-(2, 'Smeya', 'smeya@gmail.com', NULL, '$2y$10$BcIAlAQlnimWFSlxr4FPF.t5sUYwR71BkILjjIJIoWVOIl5KvG.qa', NULL, '2020-07-29 07:32:32', '2020-07-29 07:47:31');
+(2, 'Smey', 'smey@gmail.com', NULL, '$2y$10$BcIAlAQlnimWFSlxr4FPF.t5sUYwR71BkILjjIJIoWVOIl5KvG.qa', NULL, '2020-07-29 07:32:32', '2020-07-30 08:45:45'),
+(3, 'So Phearin', 'rin@gmail.com', NULL, '$2y$10$Gyg4qUWyX90nnNI27YRRjeDsQWvDduXvRHvZtsfUeWjdPA1SQS0xC', NULL, '2020-07-30 08:21:49', '2020-07-30 08:45:24');
 
 --
 -- Indexes for dumped tables
@@ -340,7 +369,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 --
 -- AUTO_INCREMENT for table `slides`
 --
@@ -350,12 +379,12 @@ ALTER TABLE `slides`
 -- AUTO_INCREMENT for table `sub_categories`
 --
 ALTER TABLE `sub_categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
