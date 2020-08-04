@@ -60,7 +60,7 @@
                                     </div>
                                   </div>
                                 </form> --}}
-                                <form action="{{ route('search') }}" class="navbar-search navbar-search-info form-inline d-md-flex ml-lg-auto mb-0">
+                                <form action="{{ route('search') }}" method="GET" class="navbar-search navbar-search-info form-inline d-md-flex ml-lg-auto mb-0">
                                   <div class="form-group">
                                       <div class="input-group input-group-alternative">
                                           <div class="input-group-prepend">
