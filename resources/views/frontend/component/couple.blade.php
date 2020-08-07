@@ -1,5 +1,5 @@
 @extends('frontend.app')
-@section('title', 'Women')
+@section('title', 'Couple')
 @section('content')
   <div class="container" style="margin-top: 50px">
     <div class="row">
